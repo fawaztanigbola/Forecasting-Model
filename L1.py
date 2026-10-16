@@ -101,7 +101,7 @@ class RNNModel(nn.Module):
 
         self.rnn = nn.RNN(
             input_size=input_size,
-            hidden_size=hidden_size
+            hidden_size=hidden_size,
             num_layers=num_layers,
             nonlinearity="tanh",
             batch_first=batch_first,

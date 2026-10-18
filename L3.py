@@ -106,8 +106,8 @@ test_ds = TensorDataset(
 )
 
 train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True,drop_last=False)
-val_loader   = DataLoader(val_ds,   batch_size=BATCH, shuffle=False, drop_last=False)
-test_loader  = DataLoader(test_ds,  batch_size=BATCH, shuffle=False, drop_last=False)
+val_loader   = DataLoader(val_ds,   batch_size=BATCH_SIZE, shuffle=False, drop_last=False)
+test_loader  = DataLoader(test_ds,  batch_size=BATCH_SIZE, shuffle=False, drop_last=False)
 
 # Creae a GRU model with single step 
 class GRUSingleStep(nn.Module):

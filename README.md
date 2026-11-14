@@ -1,29 +1,29 @@
 # Forecasting Model
 
-A modular Python framework for time series analysis, baseline modeling, and multi-stage predictive forecasting.
+A modular Python framework for time series analysis, baseline modeling, feature engineering, and multi-stage predictive forecasting.
 
 ---
 
 ## Overview
 
-**Forecasting Model** provides a structured, tiered approach to time-series forecasting and predictive analytics. The repository is organized into progressive execution scripts (`L1.py`, `L2.py`, and `L3.py`), representing different stages of complexity in data processing, feature engineering, baseline modeling, and advanced forecasting algorithms.
+**Forecasting Model** provides a structured, multi-layer approach to time-series forecasting and predictive analytics. Organized into progressive execution stages (`L1.py`, `L2.py`, and `L3.py`), the project facilitates end-to-end data processing, feature construction, benchmark creation, and advanced model ensembling.
 
-### Key Capabilities
+### Architecture Highlights
 
-* **Layer 1 (`L1.py`)**: Data ingestion, preprocessing, baseline statistics, and naive/exploratory benchmark models.
-* **Layer 2 (`L2.py`)**: Feature engineering, lag variables, rolling statistics, and classical machine learning models (e.g., regression, decision trees, time-series decomposition).
-* **Layer 3 (`L3.py`)**: Advanced ensemble techniques, model evaluation, hyperparameter tuning, and final forecasting pipelines.
+* **Layer 1 (`L1.py`) — Exploratory & Baseline Modeling**: Handles raw data ingestion, preprocessing, baseline statistics, and naive exploratory forecasting benchmarks.
+* **Layer 2 (`L2.py`) — Feature Engineering & Classical ML**: Generates time-series features (lag variables, rolling statistics, seasonal components) and trains core machine learning regression algorithms.
+* **Layer 3 (`L3.py`) — Advanced Ensembling & Tuning**: Executes advanced ensemble methods, hyperparameter optimization, and comprehensive evaluation pipelines.
 
 ---
 
 ## Tech Stack
 
-| Category | Technologies / Libraries |
+| Category | Technology / Library |
 | :--- | :--- |
 | **Language** | Python 3.8+ |
-| **Data Manipulation** | Pandas, NumPy |
-| **Modeling & ML** | Scikit-Learn, Statsmodels |
-| **Visualization** | Matplotlib, Seaborn |
+| **Data Processing** | Pandas, NumPy |
+| **Machine Learning & Time Series** | Scikit-Learn, Statsmodels |
+| **Data Visualization** | Matplotlib, Seaborn |
 
 ---
 
@@ -31,9 +31,9 @@ A modular Python framework for time series analysis, baseline modeling, and mult
 
 ```
 .
-├── L1.py       # Level 1: Data Preprocessing & Baseline Forecasting
-├── L2.py       # Level 2: Feature Engineering & Intermediate ML Models
-├── L3.py       # Level 3: Advanced Ensembling, Tuning & Model Evaluation
+├── L1.py       # Layer 1: Preprocessing & Baseline Models
+├── L2.py       # Layer 2: Feature Engineering & Classical ML
+├── L3.py       # Layer 3: Model Ensembling, Tuning & Evaluation
 └── README.md   # Project Documentation
 ```
 
@@ -43,7 +43,7 @@ A modular Python framework for time series analysis, baseline modeling, and mult
 
 ### Prerequisites
 
-Ensure you have Python 3.8 or higher installed on your system.
+Ensure Python 3.8 or higher is installed on your system:
 
 ```bash
 python --version
@@ -57,7 +57,7 @@ python --version
    cd Forecasting-Model
    ```
 
-2. **Set Up a Virtual Environment** *(Recommended)*:
+2. **Create and Activate a Virtual Environment** *(Recommended)*:
    ```bash
    # On macOS/Linux
    python3 -m venv venv
@@ -69,7 +69,6 @@ python --version
    ```
 
 3. **Install Dependencies**:
-   Install the common data science and forecasting packages:
    ```bash
    pip install pandas numpy scikit-learn statsmodels matplotlib seaborn
    ```
@@ -78,40 +77,40 @@ python --version
 
 ## Usage
 
-The repository scripts are structured sequentially. Execute each module depending on the stage of analysis you wish to run:
+The forecasting pipeline is executed in sequential stages depending on the required level of complexity:
 
-### Running Baseline Models (Level 1)
+### Stage 1: Preprocessing & Baseline Forecasts
+Run Layer 1 to perform initial data clean-up, missing value handling, and baseline model generation:
 ```bash
 python L1.py
 ```
-*Processes raw data, handles missing values, and generates baseline predictive benchmarks.*
 
-### Running Intermediate Models (Level 2)
+### Stage 2: Feature Engineering & Classical ML
+Run Layer 2 to extract time-series features (lags, rolling averages) and fit core ML models:
 ```bash
 python L2.py
 ```
-*Applies time-series feature engineering (lags, rolling windows) and trains core machine learning algorithms.*
 
-### Running Advanced Models (Level 3)
+### Stage 3: Ensembling & Model Evaluation
+Run Layer 3 to optimize hyperparameters, build complex forecasting ensembles, and compute standard error metrics (e.g., RMSE, MAE, MAPE):
 ```bash
 python L3.py
 ```
-*Executes complex forecasting ensembles, hyperparameter optimization, and outputs final evaluation metrics.*
 
 ---
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/fawaztanigbola/Forecasting-Model/issues).
+Contributions, bug reports, and feature requests are welcome. To contribute:
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/NewForecastingModel`)
-3. Commit your Changes (`git commit -m 'Add new forecasting model'`)
-4. Push to the Branch (`git push origin feature/NewForecastingModel`)
-5. Open a Pull Request
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/NewForecastingModel`).
+3. Commit your changes (`git commit -m 'Add new forecasting model'`).
+4. Push to the branch (`git push origin feature/NewForecastingModel`).
+5. Open a Pull Request.
 
 ---
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+This project is licensed under the [MIT License](LICENSE).
